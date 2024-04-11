@@ -43,11 +43,11 @@ spec:
               protocol: TCP
       resources:
           requests:
-            memory: "0.25Gi"
-            cpu: "500m"
+            memory: "64Mi"
+            cpu: "250m"
           limits:
-            memory: "0.5Gi"
-            cpu: "1"
+            memory: "128Mi"
+            cpu: "500m"
       volumes:
         - name: sonar-data
           persistentVolumeClaim:
