@@ -24,7 +24,7 @@ spec:
               name: sonar-extensions
           resources:
             limits:
-              memory: "1Gi"
+              memory: "1.3Gi"
             requests:
               memory: "500Mi"
           env:
