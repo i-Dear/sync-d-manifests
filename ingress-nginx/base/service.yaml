@@ -26,12 +26,12 @@ spec:
       protocol: TCP
       targetPort: https
   externalIPs:
-    - 223.130.141.96
+    - 52.79.43.18
   selector:
     app.kubernetes.io/component: controller
     app.kubernetes.io/instance: ingress-nginx
     app.kubernetes.io/name: ingress-nginx
-  type: NodePort
+  type: LoadBalancer
 ---
 apiVersion: v1
 kind: Service
