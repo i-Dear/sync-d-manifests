@@ -22,6 +22,11 @@ spec:
               name: sonar-data
             - mountPath: "/opt/sonarqube/extensions/"
               name: sonar-extensions
+          resources:
+            limits:
+              memory: "1Gi"
+            requests:
+              memory: "500Mi"
           env:
             - name: "SONARQUBE_JDBC_USERNAME"
               valueFrom:
