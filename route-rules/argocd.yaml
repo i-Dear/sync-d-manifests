@@ -20,10 +20,10 @@ metadata:
 spec:
   tls:
     - hosts:
-        - argocd.dev.ajoufesta.com
-      secretName: wildcard-ajoufesta-cert
+        - argocd.i-dear.org
+      secretName: wildcard-idear-cert
   rules:
-    - host: argocd.dev.ajoufesta.com
+    - host: argocd.i-dear.org
       http:
         paths:
           - pathType: Prefix

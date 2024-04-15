@@ -3,4 +3,4 @@ kind: Kustomization
 
 resources:
   - argocd.yaml
-  - sonaqube.yaml
+  # - sonaqube.yaml
