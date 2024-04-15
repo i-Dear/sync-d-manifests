@@ -20,10 +20,10 @@ metadata:
 spec:
   tls:
     - hosts:
-        - argocd.i-dear.org
-      secretName: wildcard-idear-cert
+        - argocd.dev.i-dear.org
+      secretName: dear-dev-wildcard-cert
   rules:
-    - host: argocd.i-dear.org
+    - host: argocd.dev.i-dear.org
       http:
         paths:
           - pathType: Prefix
