@@ -1,13 +1,23 @@
-apiVersion: v1
-kind: Service
+apiVersion: apps/v1
+kind: Deployment
 metadata:
-  name: syncd-backend-service
+  name: syncd-backend
 spec:
-  type: NodePort
-  ports:
-  - port: 80
-    targetPort: 8080
-    protocol: TCP
-    nodePort: 30080  
+  replicas: 1
   selector:
-    app: syncd-backend
+    matchLabels:
+      app: syncd-backend
+  template:
+    metadata:
+      labels:
+        app: syncd-backend
+    spec:
+      containers:
+      - name: syncd-backend
+        image: jayoh712/syncd:latest
+        ports:
+        - containerPort: 8080
+      dnsConfig:
+        options:
+            - name: ndots
+              value: "1"
