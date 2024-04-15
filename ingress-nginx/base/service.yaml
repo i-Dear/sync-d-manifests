@@ -46,10 +46,6 @@ metadata:
   namespace: ingress-nginx
 spec:
   ports:
-    - appProtocol: http
-      name: http-webhook
-      port: 80
-      targetPort: webhook
     - appProtocol: https
       name: https-webhook
       port: 443
