@@ -1,27 +1,26 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: wildcard-ajoufesta-cert
+  name: idear-cert
   namespace: ingress-nginx
 spec:
   dnsNames:
-    - '*.dev.ajoufesta.com'
+    - 'i-dear.org'
   issuerRef:
     kind: ClusterIssuer
-    name: letsencrypt-prod
-  secretName: wildcard-ajoufesta-cert
+    name: le-wildcard-issuer
+  secretName: idear-cert
 
 ---
 
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: ajoufesta-cert
-  namespace: ingress-nginx
+  name: idear-wildcard-cert
 spec:
   dnsNames:
-    - 'dev.ajoufesta.com'
+    - '*.i-dear.org'
   issuerRef:
     kind: ClusterIssuer
-    name: letsencrypt-prod
-  secretName: ajoufesta-cert
+    name: le-wildcard-issuer
+  secretName: wildcard-idear-cert
