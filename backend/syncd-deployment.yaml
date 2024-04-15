@@ -17,7 +17,3 @@ spec:
         image: jayoh712/syncd:latest
         ports:
         - containerPort: 8080
-      dnsConfig:
-        options:
-            - name: ndots
-              value: "1"
