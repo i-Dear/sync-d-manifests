@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: syncd-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: syncd-backend
+  template:
+    metadata:
+      labels:
+        app: syncd-backend
+    spec:
+      containers:
+      - name: syncd-backend
+        image: 
+        ports:
+        - containerPort: 8080
