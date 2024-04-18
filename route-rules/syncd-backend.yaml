@@ -5,7 +5,7 @@ metadata:
   namespace: ingress-nginx
 spec:
   type: ExternalName
-  externalName: argocd-server.syncd.svc.cluster.local
+  externalName: syncd-backend.syncd.svc.cluster.local
   ports:
     - port: 80
 
@@ -21,10 +21,10 @@ metadata:
 spec:
   tls:
     - hosts:
-      - argocd.dev.i-dear.org
+      - syncd.dev.i-dear.org
       secretName: wildcard-dev-idear-cert
   rules:
-    - host: argocd.dev.i-dear.org
+    - host: syncd.dev.i-dear.org
       http:
         paths:
           - pathType: Prefix
