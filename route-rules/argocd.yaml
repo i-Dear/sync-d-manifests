@@ -22,7 +22,7 @@ spec:
   tls:
     - hosts:
         - argocd.dev.i-dear.org
-      secretName: dear-dev-wildcard-cert
+      secretName: wildcard-dev-idear-cert
   rules:
     - host: argocd.dev.i-dear.org
       http:
