@@ -5,7 +5,7 @@ metadata:
   namespace: ingress-nginx
 spec:
   type: ExternalName
-  externalName: argocd-server.argocd.svc.cluster.local
+  externalName: argocd-server.syncd.svc.cluster.local
   ports:
     - port: 80
 

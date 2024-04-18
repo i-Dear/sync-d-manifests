@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: syncd-backend-service
+  name: syncd-backend
 spec:
   type: ClusterIP
   ports:
