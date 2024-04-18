@@ -16,7 +16,6 @@ metadata:
   name: argocd-ingress
   annotations:
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
-  IngressClass: nginx
 spec:
   tls:
     - hosts:
