@@ -9,8 +9,6 @@ metadata:
     app.kubernetes.io/version: 1.6.4
   name: ingress-nginx-controller
   namespace: ingress-nginx
-  annotations:
-    nginx.ingress.kubernetes.io/ssl-redirect: "false"
 spec:
   externalTrafficPolicy: Local
   ipFamilies:
