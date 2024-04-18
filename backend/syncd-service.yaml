@@ -3,11 +3,10 @@ kind: Service
 metadata:
   name: syncd-backend-service
 spec:
-  type: NodePort
+  type: ClusterIP
   ports:
   - port: 80
     targetPort: 8080
     protocol: TCP
-    nodePort: 30080  
   selector:
     app: syncd-backend
