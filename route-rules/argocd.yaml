@@ -20,7 +20,7 @@ metadata:
 spec:
   tls:
     - hosts:
-        - argocd.dev.i-dear.org
+      - argocd.dev.i-dear.org
       secretName: wildcard-dev-idear-cert
   rules:
     - host: argocd.dev.i-dear.org
