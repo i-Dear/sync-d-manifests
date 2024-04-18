@@ -17,6 +17,7 @@ apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
   name: idear-wildcard-cert
+  namespace: ingress-nginx
 spec:
   dnsNames:
     - '*.i-dear.org'
@@ -31,10 +32,11 @@ apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
   name: idear-dev-wildcard-cert
+  namespace: ingress-nginx
 spec:
   dnsNames:
     - '*.dev.i-dear.org'
   issuerRef:
     kind: ClusterIssuer
     name: le-wildcard-issuer
-  secretName: wildcard-idear-cert
+  secretName: wildcard-dev-idear-cert
