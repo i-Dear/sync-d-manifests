@@ -21,10 +21,10 @@ metadata:
 spec:
   tls:
     - hosts:
-      - syncd.dev.i-dear.org
-      secretName: wildcard-dev-idear-cert
+      - syncd-backend.i-dear.org
+      secretName: wildcard-idear-cert
   rules:
-    - host: syncd.dev.i-dear.org
+    - host: syncd-backend.i-dear.org
       http:
         paths:
           - pathType: Prefix
