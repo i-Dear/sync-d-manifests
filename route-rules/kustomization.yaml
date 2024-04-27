@@ -4,4 +4,5 @@ kind: Kustomization
 resources:
   - argocd.yaml
   - syncd-backend.yaml
-  # - sonaqube.yamlß
+  - grafana.yaml
+  # - sonaqube.yaml
