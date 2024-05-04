@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: syncd-dev-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: syncd-dev-backend
+  template:
+    metadata:
+      labels:
+        app: syncd-dev-backend
+    spec:
+      containers:
+      - name: syncd-dev-backend
+        image: dlckswn334/sync-d-backend:latest
+        ports:
+        - containerPort: 8080
