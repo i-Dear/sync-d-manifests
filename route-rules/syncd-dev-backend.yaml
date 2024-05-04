@@ -13,7 +13,7 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: syncd-dev-ackend-ingress
+  name: syncd-dev-backend-ingress
   namespace: ingress-nginx
   annotations:
     kubernetes.io/ingress.class: "nginx"
