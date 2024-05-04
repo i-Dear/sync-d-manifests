@@ -5,4 +5,5 @@ resources:
   - argocd.yaml
   - syncd-backend.yaml
   - grafana.yaml
+  - syncd-dev-backend.yaml
   # - sonaqube.yaml
