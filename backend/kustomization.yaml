@@ -4,4 +4,5 @@ kind: Kustomization
 resources:
   - syncd-deployment.yaml
   - syncd-service.yaml
-  # - syncd-dev-deployment.yaml
+  - syncd-dev-deployment.yaml
+  - syncd-dev-service.yaml
