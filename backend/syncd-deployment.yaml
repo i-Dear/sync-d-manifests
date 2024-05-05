@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: syncd-backend
-          image: "dlckswn334/sync-d-backend:e819f559966736ce8a866ea2e0956f3d3ca85421"
+          image: "dlckswn334/sync-d-backend:6cfcbef10d49bba51ffc1f18a4e67ebcf24df56c"
           ports:
             - containerPort: 8080
