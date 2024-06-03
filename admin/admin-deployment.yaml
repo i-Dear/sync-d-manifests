@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: syncd-admin
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: syncd-admin
+  template:
+    metadata:
+      labels:
+        app: syncd-admin
+    spec:
+      containers:
+        - name: syncd-admin
+          image: "dlckswn334/sync-d-admin:latest"
+          ports:
+            - containerPort: 3000
