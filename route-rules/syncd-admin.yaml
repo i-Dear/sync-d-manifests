@@ -31,7 +31,7 @@ spec:
             path: /
             backend:
               service:
-                name: syncd-dev-backend-external
+                name: syncd-admin-external
                 port:
                   number: 80
 
