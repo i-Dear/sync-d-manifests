@@ -6,4 +6,5 @@ resources:
   - syncd-backend.yaml
   # - grafana.yaml
   - syncd-dev-backend.yaml
+  - syncd-admin.yaml
   # - sonaqube.yaml
