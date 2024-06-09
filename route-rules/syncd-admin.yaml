@@ -5,7 +5,7 @@ metadata:
   namespace: ingress-nginx
 spec:
   type: ExternalName
-  externalName: syncd-admin.syncd.svc.cluster.local
+  externalName: syncd-admin.syncd-admin.svc.cluster.local
   ports:
     - port: 80
 
