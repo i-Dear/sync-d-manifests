@@ -1,0 +1,37 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: syncd-admin-external
+  namespace: ingress-nginx
+spec:
+  type: ExternalName
+  externalName: syncd-admin.syncd.svc.cluster.local
+  ports:
+    - port: 80
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: syncd-admin-ingress
+  namespace: ingress-nginx
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  tls:
+    - hosts:
+      - syncd-admin.dev.i-dear.org
+      secretName: wildcard-dev-idear-cert
+  rules:
+    - host: syncd-admin.dev.i-dear.org
+      http:
+        paths:
+          - pathType: Prefix
+            path: /
+            backend:
+              service:
+                name: syncd-dev-backend-external
+                port:
+                  number: 80
+
